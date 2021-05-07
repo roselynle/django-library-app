@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Check out our books!</h1>
+
+    <ul id="books-container">
+        {% for book in books %}
+            <li>
+                <a href="{% url 'library-show' book_id=book.id %}">
+                    {{ book.title }}
+                </a>
+                {{ book.author.name }}
+                {% if book.borrower %} <span class="helptext">(already checked out)</span> {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock content %}
