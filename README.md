@@ -42,11 +42,11 @@ To run the code:
    - [x] Update your views to take data from the database instead of the dummy data list
 
 3. Add User authentication
-   - [ ] Create register, login and logout routes
-   - [ ] Use the UserCreationForm to complete your templates
+   - [x] Create register, login and logout routes
+   - [x] Use the UserCreationForm to complete your templates
    - [ ] Register some new users via your registration form
-   - [ ] Make the book show route only available to logged in users
-   - [ ] Add a new field of 'borrower' to the Book model as a Foreign Key to User
+   - [x] Make the book show route only available to logged in users
+   - [x] Add a new field of 'borrower' to the Book model as a Foreign Key to User
    - [ ] In your admin dashboard, assign some books a borrower
    - [ ] Update your book show template to show if it is available to loan or not
   
