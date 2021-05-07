@@ -39,15 +39,11 @@ def create(request):
 
 @login_required
 def show(request, book_id):
-    try:
-        # book = Book.objects.get(pk=book_id)
-        # data = { 'book': book }
-        # return render(request, 'show.html', data)
         book = get_object_or_404(Book, pk=book_id)
         if request.method == 'POST':
             form = BorrowBookForm(request.POST)
             if form.is_valid():
-                book.borrower = request.user
+                book.borrower = request.user if not book.borrower else None
                 book.save()
                 return redirect("library-show", book_id=book_id)
         else:
@@ -57,6 +53,4 @@ def show(request, book_id):
             'form': form
         }
         return render(request, 'show.html', data)
-    except:
-        raise Http404('We don\'t have that book here!')
 
