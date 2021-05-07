@@ -19,11 +19,13 @@ To run the code:
 1. Getting Started
    - [x] Create a Django project with one app, 'library'
    - [x] Add generic custom 404 for page not found
-   - [ ] Add views and templates for a home and books show page (`/` and `/books/<id>`)
-   - [ ] The home page will list all the book titles
-   - [ ] The show page will list the chosen book title and author
-   - [ ] Show a custom 404 if book is not found
-   - [ ] Use dummy data for now:
+   - [x] Add views and templates for a home and books show page (`/` and `/books/<id>`)
+   - [x] The home page will list all the book titles
+      - [x] We will actually display our books list on a separate page
+   - [x] The show page will list the chosen book title and author
+   - [x] Show a custom 404 if book is not found
+   - [x] Use dummy data for now:
+      - [x] We skipped this step!
 ```python
 [
     { 'id': 1, 'title': 'Life, the Universe and Everything', 'author': 'Douglas Adams'},
@@ -44,11 +46,11 @@ To run the code:
 3. Add User authentication
    - [x] Create register, login and logout routes
    - [x] Use the UserCreationForm to complete your templates
-   - [ ] Register some new users via your registration form
+   - [x] Register some new users via your registration form
    - [x] Make the book show route only available to logged in users
    - [x] Add a new field of 'borrower' to the Book model as a Foreign Key to User
-   - [ ] In your admin dashboard, assign some books a borrower
-   - [ ] Update your book show template to show if it is available to loan or not
+   - [x] In your admin dashboard, assign some books a borrower
+   - [x] Update your book show template to show if it is available to loan or not
   
 4. Add UI forms
    - [ ] Create a new book form accessible at `books/new`
