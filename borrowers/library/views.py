@@ -1,5 +1,6 @@
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, redirect, render
+from django.contrib.auth.decorators import login_required
 
 from .models import Book
 
@@ -18,6 +19,7 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
 
+@login_required
 def show(request, book_id):
     try:
         book = Book.objects.get(pk=book_id)
