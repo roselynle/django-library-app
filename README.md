@@ -57,5 +57,5 @@ To run the code:
    - [x] On success, the form redirects to the new book's show page
    - [x] Create a button on the book show page
    - [x] If the book is available, on clicking the button, the current User becomes the borrower of that book
-   - [ ] If the book is on loan by another User, current User sees disabled button
-   - [ ] If the book is on loan by the current User, on clicking the button, the book is returned
+   - [x] If the book is on loan by another User, current User sees disabled button
+   - [x] If the book is on loan by the current User, on clicking the button, the book is returned
