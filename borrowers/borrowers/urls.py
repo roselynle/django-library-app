@@ -18,5 +18,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('library', include('library.urls'))
+    path('library/', include('library.urls'))
 ]
+
+handler404 = 'library.views.not_found_404'
+handler500 = 'library.views.server_error_500'
