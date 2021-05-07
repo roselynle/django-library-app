@@ -13,7 +13,11 @@
         </form>
     {% else %}
         {% if book.borrower == user %}
-            <button>Return me!</button>
+            <!-- <button>Return me!</button> -->
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Return me!">
         {% else %}
             <button disabled>Borrow me!</button>
             <div>I have been checked out by {{book.borrower.username}}!</div>
