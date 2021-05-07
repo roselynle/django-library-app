@@ -2,6 +2,7 @@ from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth.decorators import login_required
 
+from .forms import NewBookForm, BorrowBookForm
 from .models import Book
 
 # Create your views here.
@@ -25,10 +26,37 @@ def books(request):
     return render(request, 'books.html', data)
 
 @login_required
+def create(request):
+    if request.method == 'POST':
+        book = NewBookForm(request.POST)
+        if book.is_valid():
+            book_id = book.save().id
+            return redirect("library-show", book_id=book_id)
+    else:
+        form = NewBookForm()
+    data = {'form': form}
+    return render(request, 'newbook.html', data)
+
+@login_required
 def show(request, book_id):
     try:
-        book = Book.objects.get(pk=book_id)
-        data = { 'book': book }
+        # book = Book.objects.get(pk=book_id)
+        # data = { 'book': book }
+        # return render(request, 'show.html', data)
+        book = get_object_or_404(Book, pk=book_id)
+        if request.method == 'POST':
+            form = BorrowBookForm(request.POST)
+            if form.is_valid():
+                book.borrower = request.user
+                book.save()
+                return redirect("library-show", book_id=book_id)
+        else:
+            form = BorrowBookForm(initial={'borrower': request.user})
+        data = {
+            'book': book,
+            'form': form
+        }
         return render(request, 'show.html', data)
     except:
         raise Http404('We don\'t have that book here!')
+
