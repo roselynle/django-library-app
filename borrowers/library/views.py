@@ -20,6 +20,11 @@ def about(request):
     return render(request, 'about.html')
 
 @login_required
+def books(request):
+    data = { 'books': Book.objects.all() }
+    return render(request, 'books.html', data)
+
+@login_required
 def show(request, book_id):
     try:
         book = Book.objects.get(pk=book_id)
