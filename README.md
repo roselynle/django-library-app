@@ -13,11 +13,11 @@ To run the code:
 4. cd into project and start server
    - `python manage.py runserver` 
 5. See the app in action at
-   - `http://localhost:8000/`
+   - `http://localhost:8000/library`
 
 ## Exercises
 1. Getting Started
-   - [ ] Create a Django project with one app, 'library'
+   - [x] Create a Django project with one app, 'library'
    - [ ] Add views and templates for a home and books show page (`/` and `/books/<id>`)
    - [ ] The home page will list all the book titles
    - [ ] The show page will list the chosen book title and author
