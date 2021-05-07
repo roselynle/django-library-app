@@ -3,5 +3,24 @@
 {% block content %}
     <h1>{{ book.title }}</h1>
     <p>Author: {{ book.author }}</p>
-    <button>Borrow me!</button>
+    <!-- <button>Borrow me!</button> -->
+
+        {% if not book.borrower %}
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Borrow me!">
+        </form>
+    {% else %}
+        {% if book.borrower == user %}
+            <!-- <button>Return me!</button> -->
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Return me!">
+        {% else %}
+            <button disabled>Borrow me!</button>
+            <div>I have been checked out by {{book.borrower.username}}!</div>
+        {% endif %}
+    {% endif %}
 {% endblock content %}
