@@ -12,7 +12,7 @@ To run the code:
    - `pipenv shell`
 4. Run the following scripts to for different purposes
    - Run server: `pipenv run dev` or `cd borrowers` then `python manage.py runserver` 
-   - Run all tests: `pipenv run test` or `cd borrowers` then `python manage.py test`
+   - Run all tests: `pipenv run test` or `cd borrowers` then `python manage.py test borrowers`
    - Run individual app tests:
       - Library: `pipenv run testlib` or `cd borrowers` then `python manage.py testlib`
       - Users: `pipenv run testusers` or `cd borrowers` then `python manage.py testusers`
