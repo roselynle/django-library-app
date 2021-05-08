@@ -22,7 +22,7 @@ def about(request):
 
 @login_required
 def books(request):
-    data = { 'books': Book.objects.all() }
+    data = { 'booklist': Book.objects.all() }
     return render(request, 'books.html', data)
 
 @login_required
@@ -34,7 +34,7 @@ def create(request):
             return redirect("library-show", book_id=book_id)
     else:
         form = NewBookForm()
-    data = {'form': form}
+    data = {'form': form }
     return render(request, 'newbook.html', data)
 
 @login_required
