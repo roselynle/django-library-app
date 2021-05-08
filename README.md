@@ -16,6 +16,9 @@ To run the code:
    - Run individual app tests:
       - Library: `pipenv run testlib` or `cd borrowers` then `python manage.py testlib`
       - Users: `pipenv run testusers` or `cd borrowers` then `python manage.py testusers`
+   - Run coverage:
+      - Initialise: `pipenv run initcov`
+      - View report: `pipenv run viewcov`
 5. See the app in action at
    - `http://localhost:8000/library`
 
