@@ -34,3 +34,30 @@ class TestBasicViews(BaseTestCase):
     def test_show(self):
         response = self.c.get('library-show')
         assert "404.html" in [t.name for t in response.templates]
+
+class TestLoggedInViews(BaseTestCase):
+
+    def setUp(self):
+        self.c = Client()
+        self.c.login(username="testuser", password="testpass")
+
+    def test_books_page_load(self):
+        response = self.c.get(reverse('library-books'))
+        assert "booklist" in response.context
+        assert response.context['booklist'].count() == 1
+        assert "books.html" in [t.name for t in response.templates]
+
+    def test_create_page_load(self):
+        response = self.c.get(reverse('books-create'))
+        assert "newbook.html" in [t.name for t in response.templates]
+
+    # def test_create_new_book(self):
+    #     response = self.c.post(reverse('books-create'), {
+    #         'name': 'new_test_book',
+    #         'author': self.test_author.id
+    #     })
+    #     assert Book.objects.filter(name='new_test_book').exists()
+
+    def test_show_page_load(self):
+        response = self.c.get(reverse('library-show', kwargs={'book_id': self.book.id}))
+        assert "show.html" in [t.name for t in response.templates]
