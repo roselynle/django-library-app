@@ -24,3 +24,13 @@ class TestBasicViews(BaseTestCase):
         expected_html = render_to_string('home.html')
         assert "Biblioteca" in expected_html
         assert "home.html" in [t.name for t in response.templates]
+
+    def test_about(self):
+        response = self.c.get(reverse('library-about'))
+        expected_html = render_to_string('about.html')
+        assert "Who are we?" in expected_html
+        assert "about.html" in [t.name for t in response.templates]
+
+    def test_show(self):
+        response = self.c.get('library-show')
+        assert "404.html" in [t.name for t in response.templates]
