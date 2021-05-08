@@ -6,12 +6,16 @@ A library app created with Python/Django
 To run the code:
 1. Fork and clone this repo
 2. cd into repo
-3. Install requirements
+3. Install requirements (optional)
    - `pipenv install -r requirements.txt`
 4. Activate your virtual environment
    - `pipenv shell`
-4. cd into project and start server
-   - `python manage.py runserver` 
+4. Run the following scripts to for different purposes
+   - Run server: `pipenv run dev` or `cd borrowers` then `python manage.py runserver` 
+   - Run all tests: `pipenv run test` or `cd borrowers` then `python manage.py test`
+   - Run individual app tests:
+      - Library: `pipenv run testlib` or `cd borrowers` then `python manage.py testlib`
+      - Users: `pipenv run testusers` or `cd borrowers` then `python manage.py testusers`
 5. See the app in action at
    - `http://localhost:8000/library`
 
