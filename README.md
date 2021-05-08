@@ -1,16 +1,19 @@
-# Roselyn and Elwin's library
+# La Biblioteca
 
 A library app created with Python/Django
 
-## User installion and instructions
+This project was created by @ecarlos09 and @roselynle as our first attempt to create a Django app
+
+## Installation and usage
 To run the code:
 1. Fork and clone this repo
 2. cd into repo
-3. Install requirements (optional)
+3. Create a .env file in the root directory and add the following into the file SECRET_KEY = "XYZ", where XYZ can be any string containing a mixture of numbers, letters, and symbols
+4. Install requirements (optional)
    - `pipenv install -r requirements.txt`
-4. Activate your virtual environment
+5. Activate your virtual environment
    - `pipenv shell`
-4. Run the following scripts to for different purposes
+6. Run the following scripts to for different purposes
    - Run server: `pipenv run dev` or `cd borrowers` then `python manage.py runserver` 
    - Run all tests: `pipenv run test` or `cd borrowers` then `python manage.py test borrowers`
    - Run individual app tests:
@@ -19,16 +22,16 @@ To run the code:
    - Run coverage:
       - Initialise: `pipenv run initcov`
       - View report: `pipenv run viewcov`
-5. See the app in action at
-   - `http://localhost:8000/library`
+7. See the app in action at
+   - `http://localhost:8000/`
 
-## Exercises
+## Task Requiements
 1. Getting Started
    - [x] Create a Django project with one app, 'library'
    - [x] Add generic custom 404 for page not found
    - [x] Add views and templates for a home and books show page (`/` and `/books/<id>`)
    - [x] The home page will list all the book titles
-      - [x] We will actually display our books list on a separate page
+      - [x] We have decided to display our books list on a separate page (which requires authentication)
    - [x] The show page will list the chosen book title and author
    - [x] Show a custom 404 if book is not found
    - [x] Use dummy data for now:
@@ -66,3 +69,14 @@ To run the code:
    - [x] If the book is available, on clicking the button, the current User becomes the borrower of that book
    - [x] If the book is on loan by another User, current User sees disabled button
    - [x] If the book is on loan by the current User, on clicking the button, the book is returned
+
+## Wins & Challenges
+
+### Wins
+
+
+### Challenges
+
+
+## Bugs
+
