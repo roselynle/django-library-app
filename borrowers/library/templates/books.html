@@ -9,7 +9,7 @@
                 <a href="{% url 'library-show' book_id=book.id %}">
                     {{ book.title }}
                 </a>
-                {{ book.author.name }}
+                <span style="font-style: italic;">{{ book.author.name }}</span>
                 {% if book.borrower %} <span class="helptext">(already checked out)</span> {% endif %}
             </li>
         {% endfor %}

@@ -74,12 +74,6 @@ main {
 
 ul li {
     list-style: none;
-
-}
-
-li a {
-    color: indianred;
-    
 }
 
 input,
@@ -89,22 +83,24 @@ button {
     font-family: var(--primary-font);
     width: 50%;
     text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-      margin: 0 auto;
-      margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 15px;
 }
 
 .helptext,
 form > ul {
     opacity: 0.6;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    padding-left: 0.5rem;
 }
 
 #about {
     text-align: justify;
 }
+
 
 @media only screen and (min-width: 480px) {
     .linkset > * {

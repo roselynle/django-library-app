@@ -1,10 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-
 from .forms import UserSignupForm
 
 # Create your views here.
-
 def register(req):
     if req.method == 'POST':
         form = UserSignupForm(req.POST)
