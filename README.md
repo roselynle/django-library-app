@@ -1,10 +1,12 @@
-# La Biblioteca
+# Django - Library App
 
-A library app created with Python/Django
+![](labiblioteca-screenshot.png)
 
-This project was created by @ecarlos09 and @roselynle as our first attempt to create a Django app
+A library app created with Python/Django. Users are able to view books within the library, add new books, as well as borrow and return them.
 
-## Installation and usage
+This project was created by @ecarlos09(https://github.com/ecarlos09) and @roselynle(https://github.com/roselynle) as our first attempt to create a Django app
+
+## Installation and Usage
 To run the code:
 1. Fork and clone this repo
 2. cd into repo
@@ -25,7 +27,12 @@ To run the code:
 7. See the app in action at
    - `http://localhost:8000/`
 
+## Technologies
+
+-  Python, Django, HTML, CSS
+
 ## Task Requirements
+
 1. Getting Started
    - [x] Create a Django project with one app, 'library'
    - [x] Add generic custom 404 for page not found
@@ -73,12 +80,14 @@ To run the code:
 ## Wins & Challenges
 
 ### Wins
--  Creating a Django app
-
+-  Created a Django app which has a database and utilises user authentication
+-  Managed to write some tests and get them to pass
 
 ### Challenges
--  Implementing the logic wherby a book can be returned if it is on loan by the current User. This was later solved by using an if else statement in the views file
+-  Implementing the logic whereby a book can be returned if it is on loan by the current user. This was later solved by using an if else statement in the views file
+-  Initial difficulties with understanding the Django flow and getting the html templates to load 
 
 ## Bugs
+
 -  No known bugs
 
