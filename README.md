@@ -25,7 +25,7 @@ To run the code:
 7. See the app in action at
    - `http://localhost:8000/`
 
-## Task Requiements
+## Task Requirements
 1. Getting Started
    - [x] Create a Django project with one app, 'library'
    - [x] Add generic custom 404 for page not found
@@ -73,10 +73,12 @@ To run the code:
 ## Wins & Challenges
 
 ### Wins
+-  Creating a Django app
 
 
 ### Challenges
-
+-  Implementing the logic wherby a book can be returned if it is on loan by the current User. This was later solved by using an if else statement in the views file
 
 ## Bugs
+-  No known bugs
 
