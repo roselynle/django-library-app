@@ -4,7 +4,7 @@
 
 A library app created with Python/Django. Users are able to view books within the library, add new books, as well as borrow and return them.
 
-This project was created by @ecarlos09(https://github.com/ecarlos09) and @roselynle(https://github.com/roselynle) as our first attempt to create a Django app
+This project was created by [@ecarlos09](https://github.com/ecarlos09) and [@roselynle](https://github.com/roselynle) as our first attempt to create a Django app
 
 ## Installation and Usage
 To run the code:
