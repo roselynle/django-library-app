@@ -20,7 +20,7 @@
             <input type="submit" value="Return me!">
         {% else %}
             <button disabled>Borrow me!</button>
-            <div>I have been checked out by {{book.borrower.username}}!</div>
+            <div style="padding-top: 20px;">I have been checked out by {{book.borrower.username}}!</div>
         {% endif %}
     {% endif %}
 {% endblock content %}
